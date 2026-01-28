@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BTTH</title>
+</head>
+<body>
+    <script>
+        let tenSach = prompt("Nhập tên sách:");
+        let tacGia = prompt("Nhập tên tác giả:");
+
+        let namXuatBan = Number(prompt("Nhập năm xuất bản (VD: 2023):"));
+        let giaTien = Number(prompt("Nhập giá tiền (VD: 150000):"));
+        let soLuong = Number(prompt("Nhập số lượng (VD: 10):"));
+
+        tenSach = tenSach.trim().toUpperCase();
+        tacGia = tacGia.toUpperCase();
+
+        let maTacGia = tacGia.substring(0,3);
+        let soNgauNhien = Math.floor(Math.random()*1000)+1;
+        let maSach = `${maTacGia}${namXuatBan}-${soNgauNhien}`;
+
+        let tuoiSach = 2026 - namXuatBan;
+        let tongGiaTri = giaTien * soLuong;
+        let keSach = Math.floor(Math.random()*10)+1;
+
+        document.write(`
+        PHIẾU NHẬP KHO<br><br>
+        Mã sách: ${maSach}<br>
+        Tên sách: ${tenSach}<br>
+        Tác giả: ${tacGia}<br>
+        Năm xuất bản: ${namXuatBan}<br>
+        Tuổi sách: ${tuoiSach} năm<br>
+        Tổng giá trị: ${tongGiaTri} VNĐ<br>
+        Kệ sách: ${keSach}
+        `);
+    </script>
+</body>
+</html>
